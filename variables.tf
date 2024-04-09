@@ -2,6 +2,10 @@ variable "bucket_name" {
   default = "securitylabn01580173"
 }
 
+data "vault_generic_secret" "aws_details" {
+  path = "secret/aws"
+}
+
 variable "vpc_cidr" {
   default = "192.168.0.0/16"
 }
